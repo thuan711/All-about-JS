@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+          }
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          input,
+          textarea,
+          select,
+          button {
+            outline: none;
+          }
+          input {
+            line-height: normal;
+          }
+          label,
+          button {
+            cursor: pointer;
+          }
+          a {
+            text-decoration: none;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          /* using rem unit */
+          html {
+            font-size: 62.5%;
+          }
+          a {
+            text-decoration: none;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+          }
+          body {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            line-height: 1;
+          }
+          .tab {
+            margin: 50px auto;
+            max-width: 500px;
+            position: relative;
+          }
+          .tab-list {
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+          }
+          .tab-list {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .tab-list::-webkit-scrollbar {
+            display: none;
+          }
+          .tab-item {
+            cursor: pointer;
+            padding: 10px 15px;
+            white-space: nowrap;
+            border-bottom: 1px solid #eee;
+          }
+          .tab-item.active {
+            border-bottom-color: #6a5af9;
+          }
+          .tab-prev,
+          .tab-next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            color: #999;
+            background-color: #fff;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: all 0.2s ease;
+          }
+          .tab-next {
+            right: -50px;
+          }
+          .tab-prev {
+            left: -50px;
+          }
+          i.disabled {
+            opacity: 0;
+            visibility: hidden;
+          }
+          body {
+            height: 200vh;
+          }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8b686d7e51.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <link rel="stylesheet" href="./2.css">
+    <div class="tab">
+        <i class="fa fa-angle-left tab-prev"></i>
+        <div class="tab-list">
+            <div class="tab-item active">Home</div>
+            <div class="tab-item">Popular</div> 
+            <div class="tab-item">Hot</div>
+            <div class="tab-item">Author</div>
+            <div class="tab-item">Blog</div>
+            <div class="tab-item">Latest post</div>
+            <div class="tab-item">Trending</div>
+            <div class="tab-item">News</div>
+            <div class="tab-item">Idol</div>
+        </div>
+        <i class="fa fa-angle-right tab-next"></i>
+    </div>
+    <script src="./event/scroll.js"></script>
+</body>
+</html>

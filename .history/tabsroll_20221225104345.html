@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-list{
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        .tab-list{
+            -ms-overflow-style:none;
+            scrollbar-width: none;
+        }
+        .tab-list ::-webkit-scrollbar{
+            display: none;
+        }
+        .tab{
+            margin: 50px auto;
+            width: 500px;
+        }
+        .tab-item{
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            white-space: nowrap;
+        }
+        .tab-item .active{
+            border-bottom: red;
+        }
+        .fa fa-angle-left tab-prev{
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            color: #999;
+            background-color: #eee;
+            box-shadow: #888 0px 7px 29px 0px; 
+        }
+        .tab-next{
+            right: -50px;
+        }
+        .tab-prev{
+            left: -50px;
+        }
+        i.disabled{
+            pointer-events: none;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8b686d7e51.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <link rel="stylesheet" href="./2.css">
+    <div class="tab">
+        <i class="fa fa-angle-left tab-prev"></i>
+        <div class="tab-list">
+            <div class="tab-item active">Home</div>
+            <div class="tab-item">Popular</div> 
+            <div class="tab-item">Hot</div>
+            <div class="tab-item">Author</div>
+            <div class="tab-item">Blog</div>
+            <div class="tab-item">Latest post</div>
+            <div class="tab-item">Trending</div>
+            <div class="tab-item">News</div>
+            <div class="tab-item">Idol</div>
+        </div>
+        <i class="fa fa-angle-right tab-next"></i>
+    </div>
+    <script src="./event/scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lightbox image</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+    <style>
+        html {
+            box-sizing: border-box;
+          }
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          input,
+          textarea,
+          select,
+          button {
+            outline: none;
+          }
+          input {
+            line-height: normal;
+          }
+          label,
+          button {
+            cursor: pointer;
+          }
+          a {
+            text-decoration: none;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          /* using rem unit */
+          html {
+            font-size: 62.5%;
+          }
+          a {
+            text-decoration: none;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+          }
+          body {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            line-height: 1;
+          }
+          .content img {
+            cursor: zoom-in;
+          }
+          .content {
+            max-width: 1024px;
+            padding: 50px 25px;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 2;
+            margin: 0 auto;
+          }
+          .content p {
+            margin-bottom: 30px;
+          }
+          .content img {
+            display: block;
+            margin-bottom: 30px;
+          }
+          .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999999;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .lightbox-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+          }
+          .lightbox-content img {
+            max-height: 400px;
+            width: 90%;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+          .lightbox-content i {
+            color: white;
+            font-size: 60px;
+            cursor: pointer;
+            flex-shrink: 0;
+          }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1308&q=80"
+        alt=""
+        class="image"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1437846972679-9e6e537be46e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+        alt=""
+        class="image"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1484804959297-65e7c19d7c9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1314&q=80"
+        alt=""
+        class="image"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quaerat
+        ducimus eos fugit sit ullam facere nisi ratione. Aut porro delectus
+        natus beatae fugit velit, assumenda error iure id laudantium!
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80"
+        alt=""
+      />
+    </div>
+    <script src="./starter.js"></script>
+  </body>
+</html>

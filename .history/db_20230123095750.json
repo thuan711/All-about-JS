@@ -1,0 +1,59 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1661956600654-edac218fea67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+      "title": "ảnh e",
+      "author": "thuận",
+      "rating": "1",
+      "price": "999",
+      "bestSeller": true,
+      "buyAmount": "2",
+      "id": 12
+    },
+    {
+      "image": "",
+      "title": "",
+      "author": "",
+      "rating": "",
+      "price": "",
+      "bestSeller": false,
+      "buyAmount": "",
+      "id": 13
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1661956600654-edac218fea67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+      "title": "",
+      "author": "",
+      "rating": "",
+      "price": "",
+      "bestSeller": false,
+      "buyAmount": "",
+      "id": 14
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1661956600654-edac218fea67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+      "title": "abc",
+      "author": "thuận",
+      "rating": "",
+      "price": "",
+      "bestSeller": false,
+      "buyAmount": "",
+      "id": 15
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

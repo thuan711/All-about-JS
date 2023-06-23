@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MP3 player</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+    <style>
+        html {
+            box-sizing: border-box;
+          }
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          input,
+          textarea,
+          select,
+          button {
+            outline: none;
+          }
+          input {
+            line-height: normal;
+          }
+          label,
+          button {
+            cursor: pointer;
+          }
+          a {
+            text-decoration: none;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          body {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            line-height: 1;
+          }
+          
+          .player {
+            background-color: white;
+            padding: 20px;
+          }
+          
+          .player-box {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 20px;
+            max-width: 300px;
+            margin: 0 auto 30px;
+          }
+          
+          .player-media {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 100rem;
+            margin-bottom: 25px;
+          }
+          .player-media:before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+          }
+          
+          .player-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+          }
+          
+          .player-image.is-playing {
+            animation: rotate 10s forwards infinite linear;
+          }
+          
+          @keyframes rotate {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          
+          .progress {
+            margin-bottom: 20px;
+            margin-top: 25px;
+          }
+          
+          .player-number {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+          }
+          
+          .player-tool {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .player-play {
+            color: #2b48d9;
+            width: 45px;
+            height: 45px;
+            border-radius: 100rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: white;
+            box-shadow: 0 0 0 10px rgba(242, 243, 244, 0.5);
+            font-size: 16px;
+            margin: 0 30px;
+          }
+          
+          .player-next,
+          .player-prev {
+            cursor: pointer;
+            font-size: 16px;
+          }
+          
+          .progress {
+            width: 100%;
+            position: relative;
+          }
+          
+          .bar {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 3px;
+            background: #d3d3d3;
+            outline: none;
+            -webkit-transition: 0.2s;
+            transition: opacity 0.2s;
+          }
+          
+          .bar::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 100rem;
+            background-color: #2b48d9;
+            box-shadow: 0 0 0 5px white, 0 0 0 6px #ccc;
+          }
+          
+          .bar::-moz-range-thumb {
+            cursor: pointer;
+            width: 10px;
+            height: 10px;
+            border-radius: 100rem;
+            background-color: #2b48d9;
+            box-shadow: 0 0 0 5px white, 0 0 0 6px #ccc;
+          }
+    </style>
+  </head>
+  <body>
+    <div class="player">
+      <div class="player-box">
+        <div class="player-media">
+          <img
+            src="https://cdn.dribbble.com/users/3960463/screenshots/14630140/media/c79331860d7ca1b97430a4888617f428.png?compress=1&resize=800x600"
+            alt=""
+            class="player-image"
+          />
+        </div>
+        <div class="progress">
+          <input
+            type="range"
+            id="progress-bar"
+            min="0"
+            max=""
+            value="0"
+            class="bar"
+          />
+          <audio src="./dom/holo.mp3" id="song"></audio>
+        </div>
+        <div class="player-number">
+          <span class="player-duration">0:00</span>
+          <span class="player-remaining">0:00</span>
+        </div>
+      </div>
+      <div class="player-tool">
+        <i class="fa fa-backward player-prev"></i>
+        <i class="fa fa-play player-play"></i>
+        <i class="fa fa-forward player-next"></i>
+      </div>
+    </div>
+    <script src="./starter.js"></script>
+  </body>
+</html>

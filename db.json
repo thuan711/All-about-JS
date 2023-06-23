@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "image": "https://images.unsplash.com/photo-1661956600654-edac218fea67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+      "title": "abcd",
+      "author": "Thuận",
+      "rating": 4,
+      "price": 99,
+      "bestSeller": true,
+      "buyAmount": 9,
+      "id": 1
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1674479568785-a67c76e566c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60",
+      "title": "con gái",
+      "author": "Thuận",
+      "rating": 3,
+      "price": 3,
+      "bestSeller": false,
+      "buyAmount": 2,
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

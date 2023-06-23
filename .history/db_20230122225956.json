@@ -1,0 +1,83 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "d",
+      "author": "d",
+      "id": 2
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 3
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 4
+    },
+    {
+      "image": "aa",
+      "title": "a",
+      "author": "v",
+      "rating": "4",
+      "price": "-5",
+      "bestSeller": "on",
+      "buyAmount": "5",
+      "id": 5
+    },
+    {
+      "image": "",
+      "title": "",
+      "author": "",
+      "rating": "",
+      "price": "",
+      "buyAmount": "",
+      "id": 6
+    },
+    {
+      "image": "",
+      "title": "",
+      "author": "",
+      "rating": "",
+      "price": "",
+      "bestSeller": true,
+      "buyAmount": "",
+      "id": 7
+    },
+    {
+      "image": "",
+      "title": "",
+      "author": "",
+      "rating": "",
+      "price": "",
+      "bestSeller": false,
+      "buyAmount": "",
+      "id": 8
+    },
+    {
+      "image": "",
+      "title": "",
+      "author": "",
+      "rating": "",
+      "price": "",
+      "bestSeller": false,
+      "buyAmount": "",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

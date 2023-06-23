@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tooltip</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+    <style> 
+        html {
+            box-sizing: border-box;
+          }
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          input,
+          textarea,
+          select,
+          button {
+            outline: none;
+          }
+          input {
+            line-height: normal;
+          }
+          label,
+          button {
+            cursor: pointer;
+          }
+          a {
+            text-decoration: none;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+          }
+          *,
+          *:before,
+          *:after {
+            box-sizing: border-box;
+          }
+          /* using rem unit */
+          html {
+            font-size: 62.5%;
+          }
+          a {
+            text-decoration: none;
+          }
+          img {
+            display: block;
+            max-width: 100%;
+          }
+          body {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            line-height: 1;
+          }
+          .text {
+            color: #3d6ef7;
+            display: block;
+            font-size: 20px;
+            margin: 150px auto;
+            width: max-content;
+          }
+          .tooltip {
+            position: relative;
+          }
+          .tooltip-text {
+            position: fixed;
+            /* transform: translateX(-50%); */
+            background-color: #3d6ef7;
+            padding: 10px 20px;
+            display: block;
+            color: white;
+            border-radius: 20px;
+          }
+          .tooltip-text:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #3d6ef7;
+          }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="tooltip">
+      <div class="tooltip-text">abc</div>
+      <span class="text">Hello world</span>
+    </div> -->
+    <span class="text" data-tooltip="Welcome to my tooltip">Hello world</span>
+    <script src="./starter.js"></script>
+  </body>
+</html>

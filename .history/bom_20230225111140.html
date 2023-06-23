@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="event/bom.js"></script> -->
+    <script>
+        
+        const endpoint = "https://fakestoreapi.com/products?limit=10";
+        const promise = fetch(endpoint)
+        promise
+            .then((response)=>{
+                return response.json();
+            })
+            .then(data => {
+                
+                for (let i = 0; i < data.length; i++) {
+                  if (data[i].category == 'electronics') {
+                    data[i].discount = "30%";
+                  }
+                }
+                console.log(data);
+                console.log(data.bio);
+                console.log(data.login);
+              })
+            .catch((err)=>{
+                console.log(err);
+            });
+    </script>
+</body>
+</html>
